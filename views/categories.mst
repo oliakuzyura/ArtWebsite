@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+   {{>head}}
+   <title>Category</title>
+</head>
+<body>
+   {{>header}}
+<h1>Here you can find all categories</h1>  
+
+<form method="GET" class="search">
+  search:<br><input type="text" name="search">
+  </form>
+   <table>
+   {{#categories}}
+      <tr>
+         <td>
+            <p> {{name}} </p>
+            <a href="/categories/{{id}}" target="_blank">Category</a>
+         </td>
+      </tr>
+   {{/categories}}
+    {{^categories}}
+    
+No Items
+     
+   {{/categories}}
+   </table>
+   <a href="/new" target="_blank">New Category</a>
+   <div>
+   <a  {{#left}}href = "/categories?page={{prev}}&search={{search}}"{{/left}} >Prev </a>
+   {{currPage}} - {{maxPage}}
+   <a  {{#right}}href = "/categories?page={{next}}&search={{search}}"{{/right}}>Next </a>
+   
+
+   
+   </div>>
+   
+</body>
+{{>footer}}
+</html>

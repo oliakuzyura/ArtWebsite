@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+   {{>head}}
+   <title>Entities</title>
+</head>
+<body>
+   {{>header}}
+<h1>Here you can find all articles</h1>  
+
+<form method="GET" class="search">
+  search:<br><input type="text" name="search">
+  </form>
+   <table>
+   {{#artcileOfArticles}}
+      <tr>
+         <td>
+            <p> {{title}} </p>
+            <a href="/articles/{{id}}" target="_blank">Article</a>
+         </td>
+      </tr>
+   {{/artcileOfArticles}}
+    {{^artcileOfArticles}}
+    
+No Items
+     
+   {{/artcileOfArticles}}
+   </table>
+   <a href="/articles/new" target="_blank">New Article</a>
+   <div>
+   <a  {{#left}}href = "/articles?page={{prev}}&search={{search}}"{{/left}} >Prev </a>
+   {{currPage}} - {{maxPage}}
+   <a  {{#right}}href = "/articles?page={{next}}&search={{search}}"{{/right}}>Next </a>
+   
+
+   
+   </div>
+</body>
+{{>footer}}
+</html>

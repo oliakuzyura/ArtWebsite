@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+   {{>head}}
+<title>Article</title>
+</head>
+<body>
+  {{>header}}
+  <h1>Article</h1>
+ <div>
+    <p>{{article.title}}</p>
+    <p>{{article.type}}</p>
+    <p>{{article.pages}}</p>
+    <p><img src={{article.fileurl}} width=220 " height="300 "></p>
+ </div>
+ <form method="POST" enctype="multipart/form-data">
+
+  <input type="submit" value="Delete">
+ </form>
+</body>
+{{>footer}}
+</html>

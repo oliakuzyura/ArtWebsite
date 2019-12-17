@@ -1,0 +1,17 @@
+
+ <div class="imgCenter">
+    <img src="/images/mylogo.jpg" width="300" height="100" alt ="logo">
+  </div>
+
+
+ <nav>
+    <ul>
+      <li><a href="/"> Home</a></li>
+      {{#isadmin}}<li><a href="/users"> Users</a></li>{{/isadmin}}
+      <li> <a href="/articles"> Articles</a></li>
+      <li><a href="/about"> About</a></li>
+      <li><a href="/categories" > Categories</a></li>
+      <li><a href="/auth/register" > Register</a></li>
+      <li><a href="/auth/login" > Login</a></li>
+    </ul>
+  </nav>

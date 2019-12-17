@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+ {{>head}}
+</head>
+<body>
+ 
+  {{>header}}
+  <form  method="POST" enctype="multipart/form-data">
+  <fieldset>
+     username:<br>
+    <input type="text" name="username" ><br>
+     password:<br>
+    <input type="password" name="password" ><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+ 
+</body>
+<footer>{{>footer}}</footer>
+</html>

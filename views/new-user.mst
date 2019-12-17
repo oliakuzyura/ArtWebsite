@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+ {{>head}}
+</head>
+<body>
+ 
+  {{>header}}
+  <form  method="POST" enctype="multipart/form-data">
+  <fieldset>
+    Login:<br>
+    <input type="text" name="login" ><br>
+    Fullname:<br>
+    <input type="text" name="fullname" ><br><br>
+
+  Avatar file:<br> <input type="file" name="avaUrl"><br>
+
+
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+ 
+</body>
+<footer>{{>footer}}</footer>
+</html>

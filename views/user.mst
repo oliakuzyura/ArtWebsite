@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {{>head}}
+<title>User1</title>
+</head>
+<body>
+  {{>header}}
+    <div class="imgCenter">
+    <img src="{{user.avaUrl}}" width="100" height="100" alt ="user1 photo" class="round">
+  </div>
+  <p><strong>{{user.fullname}}</strong></p>
+  <p>{{user.login}}</p>
+</body>
+{{>footer}}
+</html>

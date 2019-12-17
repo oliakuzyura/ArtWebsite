@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+ {{>head}}
+</head>
+<body>
+ 
+  {{>header}}
+  <form  method="POST" enctype="multipart/form-data" action="/articles/new">
+  <fieldset>
+    Title:<br>
+    <input type="text" name="title" ><br>
+    Type:<br>
+    <input type="text" name="type" ><br><br>
+    Pages:<br>
+    <input type="text" name="pages" ><br><br>
+    Rating:<br>
+    <input type="text" name="rating" ><br><br>
+
+  Avatar file:<br> <input type="file" name="fileurl"><br>
+
+
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+ 
+</body>
+<footer>{{>footer}}</footer>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    {{>head}}
+    <title>Users</title>
+  </head>
+  <body>
+    {{>header}}
+    <h1>Here you can find some information about site users</h1>
+    <div class="table">
+      <table>
+  <tr>
+    <td><strong>Login</strong></td>
+    <td><strong>Fullname</strong></td>
+    <td><strong>Registered</strong></td>
+  </tr>
+   {{#users}}
+  <tr>
+    <td><strong><a href="/users/{{id}}" target="_blank">{{login}}</a></strong></td>
+    <td><strong><a href="/users/{{id}}" target="_blank">{{fullname}}</a></strong></td>
+    <td><strong>{{registeredAt}}</strong></td>
+  </tr>
+  {{/users}}
+  </table>
+    </div>
+    <a href="/new" target="_blank">New User</a><br>
+  </body>
+  {{>footer}}
+</html>

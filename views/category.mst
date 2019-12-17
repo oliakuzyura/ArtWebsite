@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+   {{>head}}
+<title>Category</title>
+</head>
+<body>
+  {{>header}}
+  <h1>Category</h1>
+ <div>
+    <p>{{category.name}}</p>
+ </div>
+ <form method="POST" enctype="multipart/form-data">
+
+  <input type="submit" value="Delete">
+ </form>
+</body>
+{{>footer}}
+</html>

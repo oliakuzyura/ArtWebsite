@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+ {{>head}}
+</head>
+<body>
+ 
+  {{>header}}
+  <form  method="POST" enctype="multipart/form-data">
+  <fieldset>
+  <div class="alert alert-warning" hidden id="label"role="alert">
+</div>
+     username:<br>
+    <input type="text" minlength="5" maxlength="20" required="true" name="username" id="usernamefield"><br>
+     password:<br>
+    <input type="password" minlength="5" maxlength="20" required="true" name="password" id="password"><br>
+     confirmPassword:<br>
+    <input type="password" name="confirmPassword" id="confirm"><br>
+     fullname:<br>
+    <input type="text" name="fullname" id="fullname"><br>
+    <input type="submit" id="submit" value="Submit">
+  </fieldset>
+</form>
+
+ 
+</body>
+<script src="/javascripts/register.js"></script>
+<footer>{{>footer}}</footer>
+</html>
