@@ -5,9 +5,23 @@
 </head>
 <body>
  
-  {{>header}}
+  <div class="imgCenter">
+    <img src="/images/mylogo.jpg" width="300" height="100" alt ="logo">
+  </div>
+
+
+ <nav>
+    <ul>
+      <li><a href="/"> Home</a></li>
+      {{#isadmin}}<li><a href="/users"> Users</a></li>{{/isadmin}}
+      <li> <a href="/articles"> Articles</a></li>
+      <li><a href="/about"> About</a></li>
+      <li><a href="/categories" > Categories</a></li>
+      {{^user}} <li><a href="/auth/register" > Register</a></li>{{/user}}
+      {{^user}} <li><a href="/auth/login" > Login</a></li>{{/user}}
+    </ul>
+  </nav>
   {{#user}}<p>Hello {{username}}!</p>{{/user}}
-  {{^user}}<p>Not logged in</p>{{/user}}
   <h1>Arts&Culture</h1>
   <p>Колись Пабло Пікассо казав: <q>Навіщо намагатися зрозуміти мистецтво? Ви ж не намагаєтеся зрозуміти, про що співають птахи …</q></p>
   <h2> У Франції з’явився перший музей цифрового живопису </h2>
